@@ -1,0 +1,43 @@
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', scale_threshold=None, ood_scale_type='avg', ood_eval_type='standard', ood_eval_method='baseline/energy', embedding_dim=512, in_dataset='CIFAR-100', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=100, model='densenet101', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-100/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-100/model_feature_stats.npy')
+setting up model: densenet101
+Number of model parameters: 800032
+loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-100/model.pt
+---------- Processing ID Starts ------------
+sample id energy scores for CIFAR-100: [ 9.66064072 11.72686958 13.5527668  10.34812832 19.53792   ]
+---------- Processing ID Finished ----------
+---------- Processing OOD Starts ------------
+processing out_dataset: SVHN
+sample ood energy scores for SVHN: [10.07057953  9.69582462 15.1984024   9.70586109  9.49456215]
+FPR95:			70.99
+AUROC: 			86.66
+AUPR:  			89.45
+processing out_dataset: places365
+sample ood energy scores for places365: [25.22205162 11.70737648 19.57191849  8.80834293 10.51569748]
+FPR95:			77.28
+AUROC: 			76.94
+AUPR:  			77.12
+processing out_dataset: iSUN
+sample ood energy scores for iSUN: [15.00761795  9.12022495  9.00786686  9.8003912   9.01784134]
+FPR95:			59.39
+AUROC: 			85.68
+AUPR:  			87.73
+processing out_dataset: dtd
+sample ood energy scores for dtd: [12.65297031 10.75730705 12.02428627  9.63939667 24.52713776]
+FPR95:			83.49
+AUROC: 			67.47
+AUPR:  			73.09
+processing out_dataset: LSUN
+sample ood energy scores for LSUN: [8.39300728 8.59106636 6.57973433 8.84990311 7.81541014]
+FPR95:			11.45
+AUROC: 			97.89
+AUPR:  			97.92
+processing out_dataset: LSUN_resize
+sample ood energy scores for LSUN_resize: [ 9.61394787  8.56137848 13.88868618 14.07159424 10.62013626]
+FPR95:			50.90
+AUROC: 			88.57
+AUPR:  			89.33
+AVG
+FPR95:			58.92
+AUROC: 			83.87
+AUPR:  			85.77
+---------- Processing OOD Finished ----------

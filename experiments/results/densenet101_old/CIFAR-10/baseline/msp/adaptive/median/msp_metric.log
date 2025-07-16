@@ -1,0 +1,43 @@
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', scale_threshold=1.0, ood_scale_type='median', ood_eval_type='adaptive', ood_eval_method='baseline/msp', embedding_dim=512, in_dataset='CIFAR-10', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=10, model='densenet101', noise=0.0015, temp=1.0, score='msp', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-10/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-10/model_feature_stats.npy')
+setting up model: densenet101
+Number of model parameters: 769162
+loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/densenet101/CIFAR-10/model.pt
+---------- Processing ID Starts ------------
+sample id msp scores for CIFAR-10: [0.0499536  0.05612013 0.05317875 0.05050569 0.04587823]
+---------- Processing ID Finished ----------
+---------- Processing OOD Starts ------------
+processing out_dataset: SVHN
+sample ood msp scores for SVHN: [0.03838412 0.04190851 0.03677486 0.01252471 0.03120136]
+FPR95:			84.22
+AUROC: 			65.28
+AUPR:  			64.03
+processing out_dataset: places365
+sample ood msp scores for places365: [0.0263837  0.03589366 0.02976459 0.01194802 0.02388221]
+FPR95:			82.37
+AUROC: 			62.24
+AUPR:  			58.28
+processing out_dataset: iSUN
+sample ood msp scores for iSUN: [0.03004018 0.02334438 0.0242262  0.01460079 0.01154851]
+FPR95:			75.71
+AUROC: 			73.93
+AUPR:  			75.41
+processing out_dataset: dtd
+sample ood msp scores for dtd: [0.02764631 0.02750479 0.04768452 0.04141842 0.06650864]
+FPR95:			91.83
+AUROC: 			44.81
+AUPR:  			57.32
+processing out_dataset: LSUN
+sample ood msp scores for LSUN: [0.0127659  0.01304293 0.02519139 0.01452546 0.02003282]
+FPR95:			45.40
+AUROC: 			89.33
+AUPR:  			89.36
+processing out_dataset: LSUN_resize
+sample ood msp scores for LSUN_resize: [0.04546816 0.02506078 0.02851249 0.02101831 0.02703429]
+FPR95:			74.00
+AUROC: 			75.43
+AUPR:  			75.26
+AVG
+FPR95:			75.59
+AUROC: 			68.50
+AUPR:  			69.94
+---------- Processing OOD Finished ----------

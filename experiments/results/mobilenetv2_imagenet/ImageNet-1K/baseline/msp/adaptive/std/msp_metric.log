@@ -1,0 +1,33 @@
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', scale_threshold=2.5, ood_scale_type='std', ood_eval_type='adaptive', ood_eval_method='baseline/msp', embedding_dim=512, in_dataset='ImageNet-1K', ood_loc='datasets/ood-imagenet/', out_dataset='iSUN-dummy', id_loc='datasets/in-imagenet/val', batch_size=64, checkpoint='model', normalize=False, num_classes=1000, model='mobilenetv2_imagenet', noise=0.0015, temp=1.0, score='msp', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model_feature_stats.npy')
+setting up model: mobilenetv2_imagenet
+Number of model parameters: 3504872
+loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model.pt
+---------- Processing ID Starts ------------
+sample id msp scores for ImageNet-1K: [0.2846064  0.26055774 0.11259938 0.80563062 0.72408611]
+---------- Processing ID Finished ----------
+---------- Processing OOD Starts ------------
+processing out_dataset: SUN
+sample ood msp scores for SUN: [0.25987527 0.07225578 0.10957246 0.0835967  0.17071274]
+FPR95:			63.13
+AUROC: 			84.82
+AUPR:  			96.34
+processing out_dataset: Places
+sample ood msp scores for Places: [0.06124868 0.55972207 0.14222933 0.42570674 0.02856561]
+FPR95:			69.74
+AUROC: 			81.72
+AUPR:  			95.36
+processing out_dataset: imagenet_dtd
+sample ood msp scores for imagenet_dtd: [0.05851268 0.02781397 0.02821242 0.04496373 0.04491599]
+FPR95:			43.60
+AUROC: 			91.46
+AUPR:  			98.93
+processing out_dataset: iNaturalist
+sample ood msp scores for iNaturalist: [0.05759713 0.06656524 0.12184431 0.23957619 0.0400312 ]
+FPR95:			45.34
+AUROC: 			90.89
+AUPR:  			97.98
+AVG
+FPR95:			55.45
+AUROC: 			87.22
+AUPR:  			97.15
+---------- Processing OOD Finished ----------

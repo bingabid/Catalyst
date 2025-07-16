@@ -1,0 +1,33 @@
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', ood_scale_type='feature_entropy', ood_eval_type='adaptive', ood_eval_method='baseline/energy', embedding_dim=512, in_dataset='ImageNet-1K', ood_loc='datasets/ood-imagenet/', out_dataset='iSUN-dummy', id_loc='datasets/in-imagenet/val', batch_size=64, checkpoint='model', normalize=False, num_classes=1000, model='resnet_imagenet50', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet_imagenet50/ImageNet-1K/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet_imagenet50/ImageNet-1K/model_feature_stats.npy')
+setting up model: resnet_imagenet50
+Number of model parameters: 25557032
+loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet_imagenet50/ImageNet-1K/model.pt
+---------- Processing ID Starts ------------
+sample id energy scores for ImageNet-1K: [1.49479413 1.39608634 1.06406534 1.74432158 2.40410614]
+---------- Processing ID Finished ----------
+---------- Processing OOD Starts ------------
+processing out_dataset: SUN
+sample ood energy scores for SUN: [0.90350944 0.96915573 0.95514441 0.96950215 1.28397858]
+FPR95:			67.08
+AUROC: 			83.21
+AUPR:  			95.35
+processing out_dataset: Places
+sample ood energy scores for Places: [1.00531781 1.46802378 1.3423177  1.05024838 0.7960273 ]
+FPR95:			72.05
+AUROC: 			80.42
+AUPR:  			94.59
+processing out_dataset: imagenet_dtd
+sample ood energy scores for imagenet_dtd: [0.89026111 1.08584964 1.31391799 0.99795961 1.00977778]
+FPR95:			58.19
+AUROC: 			83.57
+AUPR:  			96.90
+processing out_dataset: iNaturalist
+sample ood energy scores for iNaturalist: [1.03862989 1.15646386 0.93402296 0.8701964  1.50943446]
+FPR95:			68.58
+AUROC: 			84.11
+AUPR:  			95.77
+AVG
+FPR95:			66.48
+AUROC: 			82.83
+AUPR:  			95.65
+---------- Processing OOD Finished ----------
