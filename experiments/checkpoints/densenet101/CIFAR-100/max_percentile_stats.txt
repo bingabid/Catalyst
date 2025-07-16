@@ -1,0 +1,60 @@
+setting up model: densenet101
+Number of model parameters: 800032
+loading existing model:/Users/abidhassan/Desktop/DomAct/models/checkpoints/densenet101/CIFAR-100/model.pt
+Files already downloaded and verified
+start getting activation logs
+0it [00:00, ?it/s]1it [00:00,  1.03it/s]2it [00:01,  1.30it/s]3it [00:02,  1.47it/s]4it [00:02,  1.62it/s]5it [00:03,  1.72it/s]6it [00:03,  1.74it/s]7it [00:04,  1.78it/s]8it [00:04,  1.81it/s]9it [00:05,  1.83it/s]10it [00:05,  1.78it/s]11it [00:06,  1.79it/s]12it [00:07,  1.84it/s]13it [00:07,  1.86it/s]14it [00:08,  1.86it/s]15it [00:08,  1.86it/s]16it [00:09,  1.87it/s]17it [00:09,  1.86it/s]18it [00:10,  1.88it/s]19it [00:10,  1.88it/s]20it [00:11,  1.88it/s]21it [00:11,  1.84it/s]22it [00:12,  1.85it/s]23it [00:12,  1.88it/s]24it [00:13,  1.87it/s]25it [00:13,  1.87it/s]26it [00:14,  1.87it/s]27it [00:15,  1.85it/s]28it [00:15,  1.86it/s]29it [00:16,  1.86it/s]30it [00:16,  1.86it/s]31it [00:17,  1.87it/s]32it [00:17,  1.87it/s]33it [00:18,  1.84it/s]34it [00:18,  1.86it/s]35it [00:19,  1.87it/s]36it [00:19,  1.86it/s]37it [00:20,  1.85it/s]38it [00:20,  1.86it/s]39it [00:21,  1.85it/s]40it [00:22,  1.86it/s]41it [00:22,  1.85it/s]42it [00:23,  1.82it/s]43it [00:23,  1.83it/s]44it [00:24,  1.83it/s]45it [00:24,  1.72it/s]46it [00:25,  1.77it/s]47it [00:25,  1.80it/s]48it [00:26,  1.78it/s]49it [00:27,  1.81it/s]50it [00:27,  1.80it/s]50it [00:27,  1.81it/s]
+activation log shape: (50000, 342)
+-----------------------------------------------------------
+std activation value:     2.5351209197740676
+mean activation value:    2.486840053418949
+minimum activation value: 0.0
+maximum activation value: 46.33008575439453
+-----------------------------------------------------------
+THRESHOLD at percentile 60 is:2.291330671310425
+THRESHOLD at percentile 65 is:2.6094199895858763
+THRESHOLD at percentile 70 is:2.9670258045196523
+THRESHOLD at percentile 75 is:3.3818609714508057
+THRESHOLD at percentile 80 is:3.8888257026672366
+THRESHOLD at percentile 85 is:4.551419806480408
+THRESHOLD at percentile 90 is:5.527218151092528
+THRESHOLD at percentile 91 is:5.78928548336029
+THRESHOLD at percentile 92 is:6.086893749237061
+THRESHOLD at percentile 93 is:6.431609797477723
+THRESHOLD at percentile 94 is:6.839299345016476
+THRESHOLD at percentile 95 is:7.331601285934445
+THRESHOLD at percentile 96 is:7.949886608123773
+THRESHOLD at percentile 97 is:8.77087798118591
+THRESHOLD at percentile 98 is:9.961619396209716
+THRESHOLD at percentile 98.5 is:10.833130083084114
+THRESHOLD at percentile 98.9 is:11.78678537750244
+THRESHOLD at percentile 99.0 is:12.083554344177259
+-----------------------------------------------------------
+PERCENTILE at threshold 1.0 is: 32.71353801169591
+PERCENTILE at threshold 1.1 is: 35.450292397660824
+PERCENTILE at threshold 1.2 is: 38.042187134502925
+PERCENTILE at threshold 1.3 is: 40.493514619883044
+PERCENTILE at threshold 1.4 is: 42.82313450292398
+PERCENTILE at threshold 1.5 is: 45.0478187134503
+PERCENTILE at threshold 1.6 is: 47.18115789473685
+PERCENTILE at threshold 2.0 is: 54.94323391812866
+PERCENTILE at threshold 3.0 is: 70.42870760233919
+PERCENTILE at threshold 4.0 is: 80.95425730994153
+PERCENTILE at threshold 4.3 is: 83.28746783625732
+PERCENTILE at threshold 4.5 is: 84.66616959064328
+PERCENTILE at threshold 4.8 is: 86.49805263157896
+PERCENTILE at threshold 5.0 is: 87.57963157894737
+PERCENTILE at threshold 5.3 is: 89.0272105263158
+PERCENTILE at threshold 5.6 is: 90.28950877192983
+PERCENTILE at threshold 6.0 is: 91.72230994152048
+PERCENTILE at threshold 6.3 is: 92.63754385964913
+PERCENTILE at threshold 6.6 is: 93.43492982456141
+PERCENTILE at threshold 7.0 is: 94.35180116959064
+PERCENTILE at threshold 8.0 is: 96.07021637426901
+PERCENTILE at threshold 9.0 is: 97.22722222222222
+PERCENTILE at threshold 10.0 is: 98.02468421052632
+PERCENTILE at threshold 11.0 is: 98.57929824561404
+PERCENTILE at threshold 12.0 is: 98.97258479532164
+PERCENTILE at threshold 13.0 is: 99.25240350877193
+PERCENTILE at threshold 14.0 is: 99.45515789473684
+PERCENTILE at threshold 15.0 is: 99.60142105263158
