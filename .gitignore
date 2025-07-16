@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+#ignroe following big files
+.datasets/
+.experiments/checkpoints/*imagenet*/
+.statistics/*imagenet*/
