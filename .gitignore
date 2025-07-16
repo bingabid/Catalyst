@@ -12,6 +12,6 @@ __pycache__/
 Thumbs.db
 
 #ignroe following big files
-.datasets/
-.experiments/checkpoints/*imagenet*/
-.statistics/*imagenet*/
+datasets/
+experiments/checkpoints/*imagenet*/
+statistics/*imagenet*/
