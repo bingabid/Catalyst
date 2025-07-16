@@ -1,0 +1,60 @@
+setting up model: resnet18
+Number of model parameters: 11220132
+loading existing model:/Users/abidhassan/Desktop/DomAct/models/checkpoints/resnet18/CIFAR-100/model.pt
+Files already downloaded and verified
+start getting activation logs
+0it [00:00, ?it/s]1it [00:00,  3.63it/s]2it [00:00,  4.61it/s]3it [00:00,  5.11it/s]4it [00:00,  5.41it/s]5it [00:00,  5.59it/s]6it [00:01,  5.71it/s]7it [00:01,  5.78it/s]8it [00:01,  5.83it/s]9it [00:01,  5.86it/s]10it [00:01,  5.88it/s]11it [00:01,  5.90it/s]12it [00:02,  5.91it/s]13it [00:02,  5.92it/s]14it [00:02,  5.93it/s]15it [00:02,  5.93it/s]16it [00:02,  5.89it/s]17it [00:02,  5.90it/s]18it [00:03,  5.91it/s]19it [00:03,  5.92it/s]20it [00:03,  5.92it/s]21it [00:03,  5.93it/s]22it [00:03,  5.93it/s]23it [00:03,  5.92it/s]24it [00:04,  5.93it/s]25it [00:04,  5.93it/s]26it [00:04,  5.92it/s]27it [00:04,  5.64it/s]28it [00:04,  5.73it/s]29it [00:05,  5.78it/s]30it [00:05,  5.83it/s]31it [00:05,  5.87it/s]32it [00:05,  5.87it/s]33it [00:05,  5.89it/s]34it [00:05,  5.88it/s]35it [00:06,  5.89it/s]36it [00:06,  5.91it/s]37it [00:06,  5.84it/s]38it [00:06,  5.81it/s]39it [00:06,  5.78it/s]40it [00:06,  5.75it/s]41it [00:07,  5.74it/s]42it [00:07,  5.68it/s]43it [00:07,  5.64it/s]44it [00:07,  5.57it/s]45it [00:07,  5.48it/s]46it [00:08,  5.43it/s]47it [00:08,  5.41it/s]48it [00:08,  5.42it/s]49it [00:08,  5.38it/s]50it [00:08,  5.32it/s]50it [00:08,  5.70it/s]
+activation log shape: (50000, 512)
+-----------------------------------------------------------
+std activation value:     1.398864424853613
+mean activation value:    1.348197173309484
+minimum activation value: 0.0
+maximum activation value: 23.808307647705078
+-----------------------------------------------------------
+THRESHOLD at percentile 60 is:1.2871737241744992
+THRESHOLD at percentile 65 is:1.4690992057323458
+THRESHOLD at percentile 70 is:1.6755706429481503
+THRESHOLD at percentile 75 is:1.9170476496219635
+THRESHOLD at percentile 80 is:2.211106538772583
+THRESHOLD at percentile 85 is:2.590395760536193
+THRESHOLD at percentile 90 is:3.132505941390992
+THRESHOLD at percentile 91 is:3.2743070340156555
+THRESHOLD at percentile 92 is:3.434321479797365
+THRESHOLD at percentile 93 is:3.616401073932648
+THRESHOLD at percentile 94 is:3.8281946182250977
+THRESHOLD at percentile 95 is:4.0806169986724825
+THRESHOLD at percentile 96 is:4.39241989135742
+THRESHOLD at percentile 97 is:4.797743334770201
+THRESHOLD at percentile 98 is:5.373946695327758
+THRESHOLD at percentile 98.5 is:5.786415100097656
+THRESHOLD at percentile 98.9 is:6.235195159912109
+THRESHOLD at percentile 99.0 is:6.373086476325984
+-----------------------------------------------------------
+PERCENTILE at threshold 1.0 is: 50.9218203125
+PERCENTILE at threshold 1.1 is: 54.24389453125
+PERCENTILE at threshold 1.2 is: 57.395492187500004
+PERCENTILE at threshold 1.3 is: 60.370382812500004
+PERCENTILE at threshold 1.4 is: 63.17239453125
+PERCENTILE at threshold 1.5 is: 65.79446875000001
+PERCENTILE at threshold 1.6 is: 68.25303906250001
+PERCENTILE at threshold 2.0 is: 76.52735546875
+PERCENTILE at threshold 3.0 is: 88.96754296875
+PERCENTILE at threshold 4.0 is: 94.6993125
+PERCENTILE at threshold 4.3 is: 95.72783984375
+PERCENTILE at threshold 4.5 is: 96.29551953125001
+PERCENTILE at threshold 4.8 is: 97.004796875
+PERCENTILE at threshold 5.0 is: 97.39943359375
+PERCENTILE at threshold 5.3 is: 97.89337109375
+PERCENTILE at threshold 5.6 is: 98.29283203125
+PERCENTILE at threshold 6.0 is: 98.70630859375001
+PERCENTILE at threshold 6.3 is: 98.9486640625
+PERCENTILE at threshold 6.6 is: 99.14804296875
+PERCENTILE at threshold 7.0 is: 99.35467578125001
+PERCENTILE at threshold 8.0 is: 99.68014843750001
+PERCENTILE at threshold 9.0 is: 99.84188671875
+PERCENTILE at threshold 10.0 is: 99.92155859375
+PERCENTILE at threshold 11.0 is: 99.9608515625
+PERCENTILE at threshold 12.0 is: 99.9804453125
+PERCENTILE at threshold 13.0 is: 99.99023828125
+PERCENTILE at threshold 14.0 is: 99.99520703125
+PERCENTILE at threshold 15.0 is: 99.997765625

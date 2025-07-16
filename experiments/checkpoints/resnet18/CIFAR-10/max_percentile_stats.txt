@@ -1,0 +1,60 @@
+setting up model: resnet18
+Number of model parameters: 11173962
+loading existing model:/Users/abidhassan/Desktop/DomAct/models/checkpoints/resnet18/CIFAR-10/model.pt
+Files already downloaded and verified
+start getting activation logs
+0it [00:00, ?it/s]1it [00:00,  3.60it/s]2it [00:00,  4.59it/s]3it [00:00,  5.09it/s]4it [00:00,  5.39it/s]5it [00:00,  5.56it/s]6it [00:01,  5.67it/s]7it [00:01,  5.75it/s]8it [00:01,  5.78it/s]9it [00:01,  5.81it/s]10it [00:01,  5.84it/s]11it [00:01,  5.86it/s]12it [00:02,  5.82it/s]13it [00:02,  5.82it/s]14it [00:02,  5.84it/s]15it [00:02,  5.85it/s]16it [00:02,  5.87it/s]17it [00:03,  5.87it/s]18it [00:03,  5.89it/s]19it [00:03,  5.87it/s]20it [00:03,  5.86it/s]21it [00:03,  5.86it/s]22it [00:03,  5.88it/s]23it [00:04,  5.87it/s]24it [00:04,  5.89it/s]25it [00:04,  5.89it/s]26it [00:04,  5.89it/s]27it [00:04,  5.62it/s]28it [00:04,  5.71it/s]29it [00:05,  5.77it/s]30it [00:05,  5.81it/s]31it [00:05,  5.83it/s]32it [00:05,  5.85it/s]33it [00:05,  5.86it/s]34it [00:05,  5.87it/s]35it [00:06,  5.86it/s]36it [00:06,  5.81it/s]37it [00:06,  5.79it/s]38it [00:06,  5.76it/s]39it [00:06,  5.70it/s]40it [00:06,  5.63it/s]41it [00:07,  5.54it/s]42it [00:07,  5.50it/s]43it [00:07,  5.48it/s]44it [00:07,  5.46it/s]45it [00:07,  5.43it/s]46it [00:08,  5.40it/s]47it [00:08,  5.33it/s]48it [00:08,  5.32it/s]49it [00:08,  5.33it/s]50it [00:08,  5.30it/s]50it [00:08,  5.65it/s]
+activation log shape: (50000, 512)
+-----------------------------------------------------------
+std activation value:     1.0061275912438168
+mean activation value:    0.9077545061949909
+minimum activation value: 0.0
+maximum activation value: 20.013586044311523
+-----------------------------------------------------------
+THRESHOLD at percentile 60 is:0.8165333747863768
+THRESHOLD at percentile 65 is:0.9434435963630676
+THRESHOLD at percentile 70 is:1.0904724121093743
+THRESHOLD at percentile 75 is:1.2658009231090546
+THRESHOLD at percentile 80 is:1.482913994789124
+THRESHOLD at percentile 85 is:1.7682986617088314
+THRESHOLD at percentile 90 is:2.181344294548035
+THRESHOLD at percentile 91 is:2.2903993344306945
+THRESHOLD at percentile 92 is:2.412964620590211
+THRESHOLD at percentile 93 is:2.552613036632538
+THRESHOLD at percentile 94 is:2.714773921966552
+THRESHOLD at percentile 95 is:2.907287371158599
+THRESHOLD at percentile 96 is:3.143794536590576
+THRESHOLD at percentile 97 is:3.4498687148094147
+THRESHOLD at percentile 98 is:3.8796053028106687
+THRESHOLD at percentile 98.5 is:4.186841011047363
+THRESHOLD at percentile 98.9 is:4.520609971046486
+THRESHOLD at percentile 99.0 is:4.623199954032895
+-----------------------------------------------------------
+PERCENTILE at threshold 1.0 is: 67.0190859375
+PERCENTILE at threshold 1.1 is: 70.298921875
+PERCENTILE at threshold 1.2 is: 73.23781640625
+PERCENTILE at threshold 1.3 is: 75.86617968750001
+PERCENTILE at threshold 1.4 is: 78.2259453125
+PERCENTILE at threshold 1.5 is: 80.34598046875
+PERCENTILE at threshold 1.6 is: 82.2440546875
+PERCENTILE at threshold 2.0 is: 88.0692421875
+PERCENTILE at threshold 3.0 is: 95.42021484375
+PERCENTILE at threshold 4.0 is: 98.2127109375
+PERCENTILE at threshold 4.3 is: 98.6503984375
+PERCENTILE at threshold 4.5 is: 98.8784765625
+PERCENTILE at threshold 4.8 is: 99.1532421875
+PERCENTILE at threshold 5.0 is: 99.29740625000001
+PERCENTILE at threshold 5.3 is: 99.46825390625
+PERCENTILE at threshold 5.6 is: 99.597453125
+PERCENTILE at threshold 6.0 is: 99.72155078125
+PERCENTILE at threshold 6.3 is: 99.78835546875
+PERCENTILE at threshold 6.6 is: 99.8382734375
+PERCENTILE at threshold 7.0 is: 99.88708203125
+PERCENTILE at threshold 8.0 is: 99.95191796875
+PERCENTILE at threshold 9.0 is: 99.9788515625
+PERCENTILE at threshold 10.0 is: 99.99058984375
+PERCENTILE at threshold 11.0 is: 99.995875
+PERCENTILE at threshold 12.0 is: 99.99836328125001
+PERCENTILE at threshold 13.0 is: 99.9993359375
+PERCENTILE at threshold 14.0 is: 99.99974609375
+PERCENTILE at threshold 15.0 is: 99.99988671875
