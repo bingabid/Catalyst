@@ -1,17 +1,23 @@
-__pycache__/
-*.pyc
-
-# Ignore logs
-*.log
-
-# Ignore environment files
-.env
-
-# Ignore OS files
+#ignroe following big files
 .DS_Store
 Thumbs.db
-
-#ignroe following big files
 datasets/
+scripts/.DS_Store
+scripts/CIFAR-10/.DS_Store
+scripts/CIFAR-10/ResNet18/.DS_Store
+scripts/CIFAR-10/ResNet34/.DS_Store
+scripts/CIFAR-10/DesnseNet101/.DS_Store
+scripts/CIFAR-100/.DS_Store
+scripts/CIFAR-100/ResNet18/.DS_Store
+scripts/CIFAR-100/ResNet34/.DS_Store
+scripts/CIFAR-100/DesnseNet101/.DS_Store
+scripts/ImageNet/.DS_Store
+scripts/ImageNet/ResNet34/.DS_Store
+scripts/ImageNet/ResNet50/.DS_Store
+scripts/ImageNet/MobileNet-v2/.DS_Store
+utils/.DS_Store
+utils/__pycache__/*.pyc
+__pycache__/*.pyc
+experiments/model/__pycache__/*.pyc
 experiments/checkpoints/*imagenet*/
-statistics/*imagenet*/
+experiments/statistics/*imagenet*/
