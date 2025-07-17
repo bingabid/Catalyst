@@ -1,60 +1,0 @@
-setting up model: resnet18
-Number of model parameters: 11220132
-loading existing model:/Users/abidhassan/Desktop/DomAct/models/checkpoints/resnet18/CIFAR-100/model.pt
-Files already downloaded and verified
-start getting activation logs
-0it [00:00, ?it/s]1it [00:00,  3.68it/s]2it [00:00,  4.66it/s]3it [00:00,  5.13it/s]4it [00:00,  5.43it/s]5it [00:00,  5.60it/s]6it [00:01,  5.72it/s]7it [00:01,  5.81it/s]8it [00:01,  5.87it/s]9it [00:01,  5.89it/s]10it [00:01,  5.91it/s]11it [00:01,  5.92it/s]12it [00:02,  5.93it/s]13it [00:02,  5.93it/s]14it [00:02,  5.93it/s]15it [00:02,  5.94it/s]16it [00:02,  5.93it/s]17it [00:02,  5.94it/s]18it [00:03,  5.94it/s]19it [00:03,  5.96it/s]20it [00:03,  5.96it/s]21it [00:03,  5.96it/s]22it [00:03,  5.96it/s]23it [00:03,  5.96it/s]24it [00:04,  5.97it/s]25it [00:04,  5.96it/s]26it [00:04,  5.96it/s]27it [00:04,  5.58it/s]28it [00:04,  5.67it/s]29it [00:05,  5.72it/s]30it [00:05,  5.78it/s]31it [00:05,  5.81it/s]32it [00:05,  5.85it/s]33it [00:05,  5.88it/s]34it [00:05,  5.83it/s]35it [00:06,  5.77it/s]36it [00:06,  5.71it/s]37it [00:06,  5.62it/s]38it [00:06,  5.54it/s]39it [00:06,  5.50it/s]40it [00:06,  5.51it/s]41it [00:07,  5.53it/s]42it [00:07,  5.50it/s]43it [00:07,  5.45it/s]44it [00:07,  5.44it/s]45it [00:07,  5.41it/s]46it [00:08,  5.38it/s]47it [00:08,  5.38it/s]48it [00:08,  5.33it/s]49it [00:08,  5.30it/s]50it [00:08,  5.26it/s]50it [00:08,  5.66it/s]
-activation log shape: (50000, 512)
------------------------------------------------------------
-std activation value:     0.8945998808977841
-mean activation value:    0.7780650916845366
-minimum activation value: 0.0
-maximum activation value: 13.71111011505127
------------------------------------------------------------
-THRESHOLD at percentile 60 is:0.6926255226135254
-THRESHOLD at percentile 65 is:0.8099786043167114
-THRESHOLD at percentile 70 is:0.9452090799808497
-THRESHOLD at percentile 75 is:1.1055399477481842
-THRESHOLD at percentile 80 is:1.3024411678314216
-THRESHOLD at percentile 85 is:1.5588274002075195
-THRESHOLD at percentile 90 is:1.9257016658782966
-THRESHOLD at percentile 91 is:2.0223560762405395
-THRESHOLD at percentile 92 is:2.1307592391967773
-THRESHOLD at percentile 93 is:2.254146354198456
-THRESHOLD at percentile 94 is:2.3976312398910506
-THRESHOLD at percentile 95 is:2.567972505092616
-THRESHOLD at percentile 96 is:2.777910270690917
-THRESHOLD at percentile 97 is:3.0493846368789637
-THRESHOLD at percentile 98 is:3.4336429023742667
-THRESHOLD at percentile 98.5 is:3.7049022221565266
-THRESHOLD at percentile 98.9 is:3.994670202493684
-THRESHOLD at percentile 99.0 is:4.0838174867629995
------------------------------------------------------------
-PERCENTILE at threshold 1.0 is: 71.81082421875
-PERCENTILE at threshold 1.1 is: 74.8413828125
-PERCENTILE at threshold 1.2 is: 77.54394921875
-PERCENTILE at threshold 1.3 is: 79.94459765625
-PERCENTILE at threshold 1.4 is: 82.0818828125
-PERCENTILE at threshold 1.5 is: 83.977896484375
-PERCENTILE at threshold 1.6 is: 85.6742265625
-PERCENTILE at threshold 2.0 is: 90.77858984375
-PERCENTILE at threshold 3.0 is: 96.8394453125
-PERCENTILE at threshold 4.0 is: 98.9063046875
-PERCENTILE at threshold 4.3 is: 99.20661328125
-PERCENTILE at threshold 4.5 is: 99.36146875
-PERCENTILE at threshold 4.8 is: 99.53933203125
-PERCENTILE at threshold 5.0 is: 99.63029296875
-PERCENTILE at threshold 5.3 is: 99.735015625
-PERCENTILE at threshold 5.6 is: 99.8113046875
-PERCENTILE at threshold 6.0 is: 99.88048828125
-PERCENTILE at threshold 6.3 is: 99.91594140625
-PERCENTILE at threshold 6.6 is: 99.94075390625
-PERCENTILE at threshold 7.0 is: 99.96284765625
-PERCENTILE at threshold 8.0 is: 99.988609375
-PERCENTILE at threshold 9.0 is: 99.99668750000001
-PERCENTILE at threshold 10.0 is: 99.9990390625
-PERCENTILE at threshold 11.0 is: 99.99973046875
-PERCENTILE at threshold 12.0 is: 99.99992578125
-PERCENTILE at threshold 13.0 is: 99.999984375
-PERCENTILE at threshold 14.0 is: 100.0
-PERCENTILE at threshold 15.0 is: 100.0

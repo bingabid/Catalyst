@@ -1,60 +1,0 @@
-setting up model: resnet34
-Number of model parameters: 21328292
-loading existing model:/Users/abidhassan/Desktop/DomAct/models/checkpoints/resnet34/CIFAR-100/model.pt
-Files already downloaded and verified
-start getting activation logs
-0it [00:00, ?it/s]1it [00:00,  2.58it/s]2it [00:00,  3.00it/s]3it [00:00,  3.25it/s]4it [00:01,  3.38it/s]5it [00:01,  3.46it/s]6it [00:01,  3.51it/s]7it [00:02,  3.54it/s]8it [00:02,  3.56it/s]9it [00:02,  3.57it/s]10it [00:02,  3.58it/s]11it [00:03,  3.59it/s]12it [00:03,  3.59it/s]13it [00:03,  3.60it/s]14it [00:04,  3.60it/s]15it [00:04,  3.61it/s]16it [00:04,  3.61it/s]17it [00:04,  3.61it/s]18it [00:05,  3.61it/s]19it [00:05,  3.56it/s]20it [00:05,  3.52it/s]21it [00:06,  3.43it/s]22it [00:06,  3.30it/s]23it [00:06,  3.19it/s]24it [00:07,  3.10it/s]25it [00:07,  3.02it/s]26it [00:07,  2.94it/s]27it [00:08,  2.98it/s]28it [00:08,  3.01it/s]29it [00:08,  3.00it/s]30it [00:09,  3.01it/s]31it [00:09,  3.01it/s]32it [00:09,  3.03it/s]33it [00:10,  3.04it/s]34it [00:10,  3.04it/s]35it [00:10,  3.03it/s]36it [00:11,  3.05it/s]37it [00:11,  3.05it/s]38it [00:11,  3.06it/s]39it [00:12,  3.03it/s]40it [00:12,  3.04it/s]41it [00:12,  3.04it/s]42it [00:12,  3.03it/s]43it [00:13,  3.00it/s]44it [00:13,  3.01it/s]45it [00:13,  3.03it/s]46it [00:14,  3.05it/s]47it [00:14,  3.06it/s]48it [00:14,  3.05it/s]49it [00:15,  3.04it/s]50it [00:15,  3.03it/s]50it [00:15,  3.20it/s]
-activation log shape: (50000, 512)
------------------------------------------------------------
-std activation value:     0.9447706601576598
-mean activation value:    0.7668249263392026
-minimum activation value: 0.0
-maximum activation value: 13.899530410766602
------------------------------------------------------------
-THRESHOLD at percentile 60 is:0.6469224333763122
-THRESHOLD at percentile 65 is:0.7702647864818575
-THRESHOLD at percentile 70 is:0.9140713572502133
-THRESHOLD at percentile 75 is:1.0854699313640594
-THRESHOLD at percentile 80 is:1.2979166507720947
-THRESHOLD at percentile 85 is:1.5754812121391293
-THRESHOLD at percentile 90 is:1.9746659040451053
-THRESHOLD at percentile 91 is:2.0797603344917297
-THRESHOLD at percentile 92 is:2.1973071289062505
-THRESHOLD at percentile 93 is:2.3319787979125977
-THRESHOLD at percentile 94 is:2.4886929988861084
-THRESHOLD at percentile 95 is:2.67481617927551
-THRESHOLD at percentile 96 is:2.9042306327819816
-THRESHOLD at percentile 97 is:3.202123959064477
-THRESHOLD at percentile 98 is:3.620681538581848
-THRESHOLD at percentile 98.5 is:3.91802934408188
-THRESHOLD at percentile 98.9 is:4.236863146781925
-THRESHOLD at percentile 99.0 is:4.333954815864562
------------------------------------------------------------
-PERCENTILE at threshold 1.0 is: 72.63237109375
-PERCENTILE at threshold 1.1 is: 75.38023828125
-PERCENTILE at threshold 1.2 is: 77.83754296875
-PERCENTILE at threshold 1.3 is: 80.04301171875001
-PERCENTILE at threshold 1.4 is: 82.0149375
-PERCENTILE at threshold 1.5 is: 83.78454296875
-PERCENTILE at threshold 1.6 is: 85.37494140625
-PERCENTILE at threshold 2.0 is: 90.251796875
-PERCENTILE at threshold 3.0 is: 96.35323046875
-PERCENTILE at threshold 4.0 is: 98.61425
-PERCENTILE at threshold 4.3 is: 98.9663359375
-PERCENTILE at threshold 4.5 is: 99.152765625
-PERCENTILE at threshold 4.8 is: 99.37330078125001
-PERCENTILE at threshold 5.0 is: 99.48862890625
-PERCENTILE at threshold 5.3 is: 99.62399609375001
-PERCENTILE at threshold 5.6 is: 99.7256640625
-PERCENTILE at threshold 6.0 is: 99.82141015625
-PERCENTILE at threshold 6.3 is: 99.8718671875
-PERCENTILE at threshold 6.6 is: 99.90753125
-PERCENTILE at threshold 7.0 is: 99.9413984375
-PERCENTILE at threshold 8.0 is: 99.981921875
-PERCENTILE at threshold 9.0 is: 99.99449609375
-PERCENTILE at threshold 10.0 is: 99.998421875
-PERCENTILE at threshold 11.0 is: 99.9995703125
-PERCENTILE at threshold 12.0 is: 99.9998671875
-PERCENTILE at threshold 13.0 is: 99.9999609375
-PERCENTILE at threshold 14.0 is: 100.0
-PERCENTILE at threshold 15.0 is: 100.0
