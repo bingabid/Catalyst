@@ -18,7 +18,7 @@ python3 eval_ood.py \
     --in-dataset CIFAR-10 \
     --ood_loc datasets/ood/ \
     --ood_scale_type avg \
-    --scale_threshold 0.5 \
+    --scale_threshold 0.05 \
     --ood_eval_type adaptive \
     --threshold 1.2 \
     --ood_eval_method ReAct 
