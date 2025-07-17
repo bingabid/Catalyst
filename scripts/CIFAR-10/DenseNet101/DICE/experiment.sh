@@ -33,7 +33,7 @@ python3 eval_ood.py \
     --ood_scale_type std \
     --scale_threshold 3.0 \
     --ood_eval_type adaptive \
-    --p 85 \
+    --p 90 \
     --ood_eval_method DICE 
 
 python3 eval_ood.py \
