@@ -33,10 +33,10 @@ python3 eval_ood.py \
     --in-dataset ImageNet-1K \
     --ood_loc datasets/ood-imagenet/ \
     --ood_scale_type std \
-    --scale_threshold 0.1 \
+    --scale_threshold 0.01 \
     --ood_eval_type adaptive \
-    --p 10 \
-    --threshold 1.0 \
+    --p 5 \
+    --threshold 1.1 \
     --ood_eval_method ReAct+DICE 
 
 python3 eval_ood.py \
@@ -75,8 +75,8 @@ python3 eval_ood.py \
     --in-dataset ImageNet-1K \
     --ood_loc datasets/ood-imagenet/ \
     --ood_scale_type entropy \
-    --scale_threshold 2.5 \
+    --scale_threshold 2.0 \
     --ood_eval_type adaptive \
     --p 5 \
-    --threshold 1.0 \
+    --threshold 0.8 \
     --ood_eval_method ReAct+DICE 

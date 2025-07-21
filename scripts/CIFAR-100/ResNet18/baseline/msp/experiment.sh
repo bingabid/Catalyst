@@ -41,7 +41,7 @@ python3 eval_ood.py \
     --in-dataset CIFAR-100 \
     --ood_loc datasets/ood/ \
     --ood_scale_type max \
-    --scale_threshold 5.0 \
+    --scale_threshold 10.0 \
     --ood_eval_type adaptive \
     --ood_eval_method baseline/msp 
 

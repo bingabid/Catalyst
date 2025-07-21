@@ -1,11 +1,11 @@
-    python3 eval_ood.py \
-    --score msp \
+python3 eval_ood.py \
+    --score energy \
     --batch-size 64 \
-    --model densenet101 \
+    --model resnet18 \
     --id_loc datasets/in/ \
     --in-dataset CIFAR-10 \
     --ood_loc datasets/ood/ \
     --ood_scale_type avg \
-    --scale_threshold 1.2 \
-    --ood_eval_type adaptive \
-    --ood_eval_method baseline/msp 
+    --ood_eval_type standard \
+    --threshold 0.4 \
+    --ood_eval_method ReAct 

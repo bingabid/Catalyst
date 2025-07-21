@@ -31,9 +31,9 @@ python3 eval_ood.py \
     --in-dataset CIFAR-10 \
     --ood_loc datasets/ood/ \
     --ood_scale_type std \
-    --scale_threshold 1.0 \
+    --scale_threshold 1.1 \
     --ood_eval_type adaptive \
-    --threshold 1.0 \
+    --threshold 1.1 \
     --ood_eval_method ReAct 
 
 python3 eval_ood.py \

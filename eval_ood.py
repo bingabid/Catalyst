@@ -221,7 +221,6 @@ def main(args):
     if args.in_dataset == 'ImageNet-1K':
         out_datasets = ['SUN', 'Places', 'imagenet_dtd', 'iNaturalist']
     elif args.in_dataset in ["CIFAR-10", "CIFAR-100"]: 
-        # out_datasets = ['CIFAR-100'] # simulate Near-OOD for CIFAR-10
         out_datasets = [ 'SVHN', 'places365', 'iSUN', 'dtd', 'LSUN', 'LSUN_resize']
 
     auroc_list, aupr_list, fpr_list = [], [], []
