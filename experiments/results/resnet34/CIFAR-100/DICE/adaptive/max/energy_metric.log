@@ -1,4 +1,4 @@
-evaluation parameter: Namespace(p=85, ash_p=None, threshold=None, epoch='100', scale_threshold=5.0, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='DICE', embedding_dim=512, in_dataset='CIFAR-100', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=100, model='resnet34', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt', info=array([0.29484959, 0.27377356, 0.49703223, 0.39266986, 0.31416517,
+evaluation parameter: Namespace(p=85, ash_p=None, threshold=None, epoch='100', scale_threshold=10.0, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='DICE', embedding_dim=512, in_dataset='CIFAR-100', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=100, model='resnet34', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt', info=array([0.29484959, 0.27377356, 0.49703223, 0.39266986, 0.31416517,
        0.26736673, 0.38208128, 0.31667385, 0.36352998, 0.42257924,
        0.34225941, 0.33671129, 0.29136265, 0.3556959 , 0.37804681,
        0.37450185, 0.35283109, 0.23709428, 0.39692467, 0.29800888,
@@ -105,41 +105,41 @@ setting up model: resnet34
 Number of model parameters: 21328292
 loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt
 ---------- Processing ID Starts ------------
-sample id energy scores for CIFAR-100: [15.52805614 18.87579918 28.58975983 27.08000946 20.49439049]
+sample id energy scores for CIFAR-100: [15.82254887 19.17617226 29.62862015 27.89798546 21.42490005]
 ---------- Processing ID Finished ----------
 ---------- Processing OOD Starts ------------
 processing out_dataset: SVHN
-sample ood energy scores for SVHN: [16.58626366 11.09295845 10.98122978 11.2607851  15.09451866]
-FPR95:			7.83
-AUROC: 			98.23
-AUPR:  			98.29
+sample ood energy scores for SVHN: [16.68290901 11.2546854  11.00810146 11.44618988 15.18757915]
+FPR95:			7.93
+AUROC: 			98.20
+AUPR:  			98.27
 processing out_dataset: places365
-sample ood energy scores for places365: [25.63122749 19.91798973 20.01750946 17.87344933 21.31138802]
-FPR95:			86.69
-AUROC: 			71.55
-AUPR:  			72.93
+sample ood energy scores for places365: [26.97227859 20.19457626 20.02212906 17.93963242 21.48599625]
+FPR95:			86.25
+AUROC: 			72.01
+AUPR:  			73.33
 processing out_dataset: iSUN
-sample ood energy scores for iSUN: [13.98708344 18.60735703 15.92046833 14.79038906 15.2596941 ]
-FPR95:			57.69
-AUROC: 			88.66
-AUPR:  			90.96
+sample ood energy scores for iSUN: [14.13582993 18.77043152 15.94353771 14.94346619 15.39406776]
+FPR95:			56.39
+AUROC: 			89.12
+AUPR:  			91.38
 processing out_dataset: dtd
-sample ood energy scores for dtd: [8.67308521 7.65828276 9.33772945 7.37274075 8.59195042]
-FPR95:			39.91
-AUROC: 			89.96
-AUPR:  			93.69
+sample ood energy scores for dtd: [8.80272007 7.77325153 9.56961155 7.45798063 8.70135498]
+FPR95:			40.11
+AUROC: 			90.01
+AUPR:  			93.75
 processing out_dataset: LSUN
-sample ood energy scores for LSUN: [12.53539371 12.4853096   9.92310905 14.56595612 10.50536156]
-FPR95:			7.18
-AUROC: 			98.59
-AUPR:  			98.65
+sample ood energy scores for LSUN: [12.96782017 12.62249756  9.97303104 14.72941875 10.53931904]
+FPR95:			6.74
+AUROC: 			98.63
+AUPR:  			98.69
 processing out_dataset: LSUN_resize
-sample ood energy scores for LSUN_resize: [13.30842113 20.98590279 14.0530777  19.65138245 12.81307602]
-FPR95:			63.00
-AUROC: 			87.21
-AUPR:  			89.09
+sample ood energy scores for LSUN_resize: [13.36311436 21.12117195 14.0610199  19.7412529  12.8171587 ]
+FPR95:			61.18
+AUROC: 			87.76
+AUPR:  			89.62
 AVG
-FPR95:			43.72
-AUROC: 			89.03
-AUPR:  			90.60
+FPR95:			43.10
+AUROC: 			89.29
+AUPR:  			90.84
 ---------- Processing OOD Finished ----------

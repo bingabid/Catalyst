@@ -1,4 +1,4 @@
-evaluation parameter: Namespace(p=85, ash_p=None, threshold=1.5, epoch='100', scale_threshold=1.5, ood_scale_type='std', ood_eval_type='adaptive', ood_eval_method='ReAct+DICE', embedding_dim=512, in_dataset='CIFAR-100', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=100, model='resnet34', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt', info=array([0.29484959, 0.27377356, 0.49703223, 0.39266986, 0.31416517,
+evaluation parameter: Namespace(p=85, ash_p=None, threshold=1.5, epoch='100', scale_threshold=3.0, ood_scale_type='std', ood_eval_type='adaptive', ood_eval_method='ReAct+DICE', embedding_dim=512, in_dataset='CIFAR-100', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=100, model='resnet34', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt', info=array([0.29484959, 0.27377356, 0.49703223, 0.39266986, 0.31416517,
        0.26736673, 0.38208128, 0.31667385, 0.36352998, 0.42257924,
        0.34225941, 0.33671129, 0.29136265, 0.3556959 , 0.37804681,
        0.37450185, 0.35283109, 0.23709428, 0.39692467, 0.29800888,
@@ -105,41 +105,41 @@ setting up model: resnet34
 Number of model parameters: 21328292
 loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-100/model.pt
 ---------- Processing ID Starts ------------
-sample id energy scores for CIFAR-100: [4.63756275 5.536654   7.57142591 7.29273701 4.6020298 ]
+sample id energy scores for CIFAR-100: [4.71520138 5.64669895 7.89193916 7.54132223 4.89519215]
 ---------- Processing ID Finished ----------
 ---------- Processing OOD Starts ------------
 processing out_dataset: SVHN
-sample ood energy scores for SVHN: [4.87249374 3.09313321 3.08143282 3.25851679 4.40368509]
-FPR95:			11.70
-AUROC: 			97.54
-AUPR:  			97.71
+sample ood energy scores for SVHN: [4.89811563 3.13896465 3.08631396 3.3250072  4.4334774 ]
+FPR95:			11.14
+AUROC: 			97.66
+AUPR:  			97.83
 processing out_dataset: places365
-sample ood energy scores for places365: [6.21051073 5.2727356  5.03210974 5.52579975 5.91713619]
-FPR95:			91.71
-AUROC: 			63.94
-AUPR:  			66.18
+sample ood energy scores for places365: [6.63565969 5.36244917 5.03955269 5.56140518 5.98743296]
+FPR95:			91.51
+AUROC: 			64.96
+AUPR:  			67.28
 processing out_dataset: iSUN
-sample ood energy scores for iSUN: [3.63653374 5.28151274 4.81970549 4.12050772 4.50082684]
-FPR95:			71.27
-AUROC: 			84.23
-AUPR:  			87.35
+sample ood energy scores for iSUN: [3.66501498 5.30912685 4.84212446 4.15142488 4.54831171]
+FPR95:			68.76
+AUROC: 			85.45
+AUPR:  			88.46
 processing out_dataset: dtd
-sample ood energy scores for dtd: [2.13595057 2.05994749 2.49134803 1.99240911 1.97342288]
-FPR95:			37.04
-AUROC: 			89.73
-AUPR:  			93.01
+sample ood energy scores for dtd: [2.14046812 2.06392145 2.5023737  1.99240911 1.97457743]
+FPR95:			36.12
+AUROC: 			90.34
+AUPR:  			93.56
 processing out_dataset: LSUN
-sample ood energy scores for LSUN: [3.70512676 3.60837936 2.8945477  4.44109535 3.02871633]
-FPR95:			14.78
-AUROC: 			97.29
-AUPR:  			97.48
+sample ood energy scores for LSUN: [3.85394454 3.66100693 2.91123605 4.4764967  3.0425148 ]
+FPR95:			13.41
+AUROC: 			97.53
+AUPR:  			97.71
 processing out_dataset: LSUN_resize
-sample ood energy scores for LSUN_resize: [3.69557357 6.10328341 4.31235313 5.59868288 3.82980704]
-FPR95:			77.80
-AUROC: 			81.85
-AUPR:  			84.34
+sample ood energy scores for LSUN_resize: [3.70104408 6.14465094 4.31343317 5.64672709 3.8307116 ]
+FPR95:			75.74
+AUROC: 			83.28
+AUPR:  			85.74
 AVG
-FPR95:			50.72
-AUROC: 			85.76
-AUPR:  			87.68
+FPR95:			49.45
+AUROC: 			86.54
+AUPR:  			88.43
 ---------- Processing OOD Finished ----------

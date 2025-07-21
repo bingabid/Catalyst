@@ -1,43 +1,43 @@
-evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', scale_threshold=4.0, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='baseline/msp', embedding_dim=512, in_dataset='CIFAR-10', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=10, model='resnet34', noise=0.0015, temp=1.0, score='msp', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-10/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-10/model_feature_stats.npy')
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=None, epoch='100', scale_threshold=10.0, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='baseline/msp', embedding_dim=512, in_dataset='CIFAR-10', ood_loc='datasets/ood/', out_dataset='iSUN-dummy', id_loc='datasets/in/', batch_size=64, checkpoint='model', normalize=False, num_classes=10, model='resnet34', noise=0.0015, temp=1.0, score='msp', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-10/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-10/model_feature_stats.npy')
 setting up model: resnet34
 Number of model parameters: 21282122
 loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/resnet34/CIFAR-10/model.pt
 ---------- Processing ID Starts ------------
-sample id msp scores for CIFAR-10: [0.85771644 0.71821654 0.61278498 0.52563506 0.96054584]
+sample id msp scores for CIFAR-10: [0.88022745 0.75154608 0.62646282 0.52916294 1.01133955]
 ---------- Processing ID Finished ----------
 ---------- Processing OOD Starts ------------
 processing out_dataset: SVHN
-sample ood msp scores for SVHN: [0.37772521 0.33660096 0.35719854 0.49607122 0.25241429]
-FPR95:			20.14
-AUROC: 			96.94
-AUPR:  			97.41
+sample ood msp scores for SVHN: [0.37772521 0.33848107 0.35799488 0.50549787 0.25241429]
+FPR95:			19.56
+AUROC: 			97.04
+AUPR:  			97.50
 processing out_dataset: places365
-sample ood msp scores for places365: [0.33742931 0.76439399 0.35953575 0.15714873 0.40585533]
-FPR95:			50.86
-AUROC: 			90.04
-AUPR:  			90.59
+sample ood msp scores for places365: [0.33779377 0.77402592 0.35979566 0.1573247  0.40585533]
+FPR95:			49.95
+AUROC: 			90.63
+AUPR:  			91.33
 processing out_dataset: iSUN
-sample ood msp scores for iSUN: [0.50890279 0.4346945  0.29525566 0.2571997  0.46645963]
-FPR95:			21.12
-AUROC: 			96.71
-AUPR:  			97.60
+sample ood msp scores for iSUN: [0.50891817 0.4346945  0.29525566 0.2571997  0.46645963]
+FPR95:			19.87
+AUROC: 			96.89
+AUPR:  			97.76
 processing out_dataset: dtd
-sample ood msp scores for dtd: [0.26749688 0.28602237 0.25451168 0.29367074 0.20378856]
-FPR95:			26.03
-AUROC: 			95.72
-AUPR:  			97.68
+sample ood msp scores for dtd: [0.26749688 0.28602237 0.25451168 0.29367074 0.20562248]
+FPR95:			25.11
+AUROC: 			95.97
+AUPR:  			97.85
 processing out_dataset: LSUN
-sample ood msp scores for LSUN: [0.08265148 0.31895378 0.11253731 0.38585916 0.547952  ]
-FPR95:			4.41
-AUROC: 			99.09
-AUPR:  			99.19
+sample ood msp scores for LSUN: [0.08265148 0.31895378 0.11253731 0.39005134 0.5499711 ]
+FPR95:			4.08
+AUROC: 			99.13
+AUPR:  			99.23
 processing out_dataset: LSUN_resize
-sample ood msp scores for LSUN_resize: [0.42285618 0.55431861 0.5540694  0.32930142 0.21902892]
-FPR95:			23.12
-AUROC: 			96.49
-AUPR:  			97.21
+sample ood msp scores for LSUN_resize: [0.42285618 0.55477965 0.55539101 0.33017743 0.22081843]
+FPR95:			21.81
+AUROC: 			96.70
+AUPR:  			97.41
 AVG
-FPR95:			24.28
-AUROC: 			95.83
-AUPR:  			96.61
+FPR95:			23.40
+AUROC: 			96.06
+AUPR:  			96.85
 ---------- Processing OOD Finished ----------
