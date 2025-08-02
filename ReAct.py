@@ -81,6 +81,10 @@ def get_activation_log(model, train_set):
             y = y.to(device)
 
             features = model.features(x)
+            # use following for DenseNet121
+            # features = model.densenet_features(x)
+            # use following for MobileNetV2
+            # features = model.mobilenet_features(x) 
             activation_log[start_ind:end_ind, :] = features.data.cpu().numpy()
 
     print(f"activation log shape: {activation_log.shape}")

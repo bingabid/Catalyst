@@ -1,33 +1,33 @@
-evaluation parameter: Namespace(p=None, ash_p=None, threshold=1.1, epoch='100', scale_threshold=1.3, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='ReAct', embedding_dim=512, in_dataset='ImageNet-1K', ood_loc='datasets/ood-imagenet/', out_dataset='iSUN-dummy', id_loc='datasets/in-imagenet/val', batch_size=64, checkpoint='model', normalize=False, num_classes=1000, model='mobilenetv2_imagenet', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model_feature_stats.npy')
+evaluation parameter: Namespace(p=None, ash_p=None, threshold=1.1, epoch='100', scale_threshold=0.8, ood_scale_type='max', ood_eval_type='adaptive', ood_eval_method='ReAct', embedding_dim=512, in_dataset='ImageNet-1K', ood_loc='datasets/ood-imagenet/', out_dataset='iSUN-dummy', id_loc='datasets/in-imagenet/val', batch_size=64, checkpoint='model', normalize=False, num_classes=1000, model='mobilenetv2_imagenet', noise=0.0015, temp=1.0, score='energy', device=device(type='mps'), ckpt='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model.pt', info='/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model_feature_stats.npy')
 setting up model: mobilenetv2_imagenet
 Number of model parameters: 3504872
 loading existing model:/Users/abidhassan/Desktop/adapt/experiments/checkpoints/mobilenetv2_imagenet/ImageNet-1K/model.pt
 ---------- Processing ID Starts ------------
-sample id energy scores for ImageNet-1K: [10.95343018 13.14633179 10.70027065 18.61904907 16.78652573]
+sample id energy scores for ImageNet-1K: [ 7.0976696   8.43187332  6.82258034 11.97535706 10.80634499]
 ---------- Processing ID Finished ----------
 ---------- Processing OOD Starts ------------
 processing out_dataset: SUN
-sample ood energy scores for SUN: [9.18741226 9.28905964 9.25607681 7.56450796 9.17694092]
-FPR95:			35.08
-AUROC: 			92.06
-AUPR:  			98.06
+sample ood energy scores for SUN: [6.26172352 6.25958633 6.10970545 5.36950111 6.42899942]
+FPR95:			37.07
+AUROC: 			91.33
+AUPR:  			97.87
 processing out_dataset: Places
-sample ood energy scores for Places: [ 9.90750027 11.71896553  8.88692284 10.64463234  9.33589745]
-FPR95:			49.93
-AUROC: 			87.91
-AUPR:  			96.96
+sample ood energy scores for Places: [6.45007086 7.78774643 6.09535217 7.27376938 6.08018398]
+FPR95:			50.78
+AUROC: 			87.29
+AUPR:  			96.80
 processing out_dataset: imagenet_dtd
-sample ood energy scores for imagenet_dtd: [5.79342699 5.41081619 5.34314108 5.76455927 6.28857422]
-FPR95:			9.11
-AUROC: 			97.66
-AUPR:  			99.68
+sample ood energy scores for imagenet_dtd: [4.24116421 3.96865225 3.86325526 4.23010349 4.43498659]
+FPR95:			10.04
+AUROC: 			97.35
+AUPR:  			99.63
 processing out_dataset: iNaturalist
-sample ood energy scores for iNaturalist: [ 6.72695446  9.64017582  9.92009354 10.02863789  7.37836266]
-FPR95:			24.60
-AUROC: 			95.55
-AUPR:  			99.06
+sample ood energy scores for iNaturalist: [4.88258934 6.49954224 6.41628647 6.56524706 5.1685791 ]
+FPR95:			26.80
+AUROC: 			95.18
+AUPR:  			98.97
 AVG
-FPR95:			29.68
-AUROC: 			93.29
-AUPR:  			98.44
+FPR95:			31.17
+AUROC: 			92.78
+AUPR:  			98.32
 ---------- Processing OOD Finished ----------

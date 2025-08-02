@@ -30,7 +30,7 @@ def args_parser():
     parser.add_argument('--normalize', action='store_true', help='normalize feat embeddings')
     parser.add_argument('--num_classes', default=10, type=int, help='number of classes in in-dataset')
     parser.add_argument('--embedding_dim', default = 512, type=int, help='penultimate feature dimension')
-    parser.add_argument('--pool', default = 'avg', type=str, help='custom operation in [avg, max, avg+std, median]')
+    # parser.add_argument('--pool', default = 'avg', type=str, help='custom operation in [avg, max, avg+std, median]')
     parser.add_argument('--model', default='resnet18', type=str, help='model architecture: [resnet18, resnet34, restnet50, restnet101, densenet101]')
 
     device = get_device()
@@ -79,6 +79,8 @@ def precompute(args, model, train_set):
             y = y.to(device)
 
             features = model.features(x)
+            # use following for DenseNet121
+            # features = model.densenet_features(x)
             # use following for MobileNetV2
             # features = model.mobilenet_features(x) 
             feat_log[start_ind:end_ind, :] = features.data.cpu().numpy()

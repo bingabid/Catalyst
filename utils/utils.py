@@ -11,7 +11,7 @@ import torch.nn.functional as F
 
 from experiments.model.resnet import MyResNet
 from experiments.model.densenet import MyDenseNet
-from experiments.model.imagenet import resnet18, resnet34, resnet50, mobilenet_v2
+from experiments.model.imagenet import resnet18, resnet34, resnet50, mobilenet_v2, densenet121
 
 
 from datetime import datetime
@@ -123,6 +123,8 @@ def set_model(args):
         model = resnet34(args)
     elif args.model in ['resnet_imagenet50']:
         model = resnet50(args)
+    elif args.model in ['densenet_imagenet121']:
+        model = densenet121(args)
     elif args.model in ['mobilenetv2_imagenet']:
         model = mobilenet_v2(args)
 

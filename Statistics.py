@@ -188,12 +188,15 @@ def save_weights(args, model, weight_directory):
     if args.model in ['densenet101', 'resnet18', 'resnet34']: 
         W = model.output_layer.weight.detach().cpu().numpy()
         b = model.output_layer.bias.detach().cpu().numpy()
-    elif args.model in ['densenet101_old', 'resnet_imagenet34', 'resnet_imagenet50']:
+    elif args.model in ['resnet_imagenet34', 'resnet_imagenet50']:
         W = model.fc.weight.detach().cpu().numpy()
         b = model.fc.bias.detach().cpu().numpy()
     elif args.model in ['mobilenetv2_imagenet']:
         W = model.classifier[1].weight.detach().cpu().numpy()
         b = model.classifier[1].bias.detach().cpu().numpy()
+    elif args.model in [ 'densenet_imagenet121']:
+        W = model.classifier.weight.detach().cpu().numpy()
+        b = model.classifier.bias.detach().cpu().numpy()
     np.save(W_fname, W)
     np.save(b_fname, b)
 
@@ -324,12 +327,12 @@ def main(args):
             os.makedirs(directory)
     # print(f"in stats file location: {weight_directory, in_scales_directory, in_features_directory}")
     
-    # save W: weight matrix f(x) = W^Th(x) + b
-    save_weights(args, model, weight_directory)
-    # save features
-    train_set, test_set = load_in_dataset(args)
-    labels, avg, std, maxi, median, entropy, logit = obtain_in_statistics(args, model, test_set)
-    save_in_features(in_features_directory, in_scales_directory, avg, std, maxi, median, entropy, logit, labels)
+    # # save W: weight matrix f(x) = W^Th(x) + b
+    # save_weights(args, model, weight_directory)
+    # # save features
+    # train_set, test_set = load_in_dataset(args)
+    # labels, avg, std, maxi, median, entropy, logit = obtain_in_statistics(args, model, test_set)
+    # save_in_features(in_features_directory, in_scales_directory, avg, std, maxi, median, entropy, logit, labels)
 
     print('---------- Processing ID Finished -------------')
 
@@ -337,9 +340,9 @@ def main(args):
 
     print('---------- Processing OOD Starts ------------')
     if args.in_dataset == 'ImageNet-1K':
-        out_datasets = ['SUN', 'Places', 'imagenet_dtd', 'iNaturalist']
+        out_datasets = [ 'imagenet_noise'] #['SUN', 'Places', 'imagenet_dtd', 'iNaturalist'] #[ 'imagenet_noise']
     elif args.in_dataset in ["CIFAR-10", "CIFAR-100"]: 
-        out_datasets = [ 'SVHN', 'places365', 'iSUN', 'dtd', 'LSUN', 'LSUN_resize']
+        out_datasets = [ 'cifar_noise'] #[ 'SVHN', 'places365', 'iSUN', 'dtd', 'LSUN', 'LSUN_resize'] #[ 'cifar_noise']
 
     for out_dataset in out_datasets:
         args.out_dataset = out_dataset

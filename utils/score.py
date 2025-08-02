@@ -45,7 +45,7 @@ def get_logits(inputs, model, args, logits=None):
         model.eval()
         with torch.inference_mode():
             if args.in_dataset == 'ImageNet-1K':
-                if args.model == 'mobilenetv2_imagenet':
+                if args.model in ['mobilenetv2_imagenet', 'densenet_imagenet121']:
                     logits = model.classifier(inputs)
                 else:
                     logits = model.fc(inputs)

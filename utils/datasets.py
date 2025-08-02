@@ -236,6 +236,23 @@ def load_imagenet_dtd(args, num_samples = 10000, img_size = 256):
 
     return dtd_train_set, dtd_test_set
 
+def load_imagenet_noise(args, num_samples = 10000, img_size = 256):
+    root = os.path.join(args.ood_loc, args.out_dataset)
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    transform = transforms.Compose([transforms.Resize(img_size), 
+                                transforms.CenterCrop(224),
+                                transforms.ToTensor(), 
+                                normalize
+                ])
+    
+    imagenet_noise_test_set = datasets.ImageFolder(root = root, transform = transform)
+    imagenet_noise_train_set = "dummy"
+
+    # if len(imagenet_noise_test_set) > num_samples:
+    #     imagenet_noise_test_set = torch.utils.data.Subset(imagenet_noise_test_set, np.random.choice(len(imagenet_noise_test_set), num_samples, replace=False))
+
+    return imagenet_noise_train_set, imagenet_noise_test_set
+
 def load_dtd(args, num_samples = 10000, img_size = 32):
     root = os.path.join(args.ood_loc, args.out_dataset, "images")
     normalize = transforms.Normalize(mean=[0.491, 0.482, 0.447], std=[0.247, 0.244, 0.262])
@@ -300,6 +317,22 @@ def load_LSUN_resize(args, num_samples = 10000, img_size = 32):
 
     return lsun_resize_train_set, lsun_resize_test_set
 
+def load_cifar_noise(args, num_samples = 10000, img_size = 32):
+    root = os.path.join(args.ood_loc, args.out_dataset)
+    normalize = transforms.Normalize(mean=[0.491, 0.482, 0.447], std=[0.247, 0.244, 0.262])
+    transform = transforms.Compose([transforms.Resize(img_size), 
+                                transforms.CenterCrop(img_size),
+                                transforms.ToTensor(), 
+                                normalize
+                ])
+    cifar_noise_test_set =  datasets.ImageFolder(root = root, transform = transform)
+    cifar_noise_train_set = "dummy"
+
+    if len(cifar_noise_test_set) > num_samples:
+        cifar_noise_test_set = torch.utils.data.Subset(cifar_noise_test_set, np.random.choice(len(cifar_noise_test_set), num_samples, replace=False))
+
+    return cifar_noise_train_set, cifar_noise_test_set
+
     
 def load_out_dataset(args):
     if args.out_dataset == 'SVHN':
@@ -324,6 +357,10 @@ def load_out_dataset(args):
         return load_imagenet_iNaturalist(args)
     elif args.out_dataset == 'CIFAR-100':
         return load_cifar100(args)
+    elif args.out_dataset == 'cifar_noise':
+        return load_cifar_noise(args)
+    elif args.out_dataset == 'imagenet_noise':
+        return load_imagenet_noise(args)
     
 def dataset_loader( args, datasets, batch_size = None, shuffle = False, drop_last = False):
     if batch_size is None:
