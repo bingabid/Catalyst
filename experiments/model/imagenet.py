@@ -1,4 +1,6 @@
+import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 
 from .route import RouteDICE
@@ -11,6 +13,8 @@ model_urls = {
     "resnet152": "https://download.pytorch.org/models/resnet152-f82ba261.pth",
     'mobilenet_v2': 'https://download.pytorch.org/models/mobilenet_v2-b0353104.pth',
 }
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ResNet +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 class BasicBlock(nn.Module):
     expansion = 1
@@ -170,7 +174,7 @@ def resnet50(args, pretrained=False):
     return model  
 
 
-#### MobileNetV2 ######
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ MobileNetV2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 #  Conv + BatchNorm + ReLU6
 class ConvBNReLU(nn.Sequential):
@@ -297,4 +301,138 @@ def mobilenet_v2(args, pretrained=True):
     model = MyMobileNetV2(args=args)
     if pretrained:
         model.load_state_dict(model_zoo.load_url(model_urls['mobilenet_v2']))
+    return model
+
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ DenseNet-121 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+from collections import OrderedDict
+
+class DenseLayer(nn.Module):
+    def __init__( self, input_features, growth_rate, bn_size, drop_rate):
+        super().__init__()
+        self.norm1 = nn.BatchNorm2d(input_features)
+        self.relu1 = nn.ReLU(inplace=True)
+        self.conv1 = nn.Conv2d(input_features, bn_size * growth_rate, kernel_size=1, stride=1, bias=False)
+
+        self.norm2 = nn.BatchNorm2d(bn_size * growth_rate)
+        self.relu2 = nn.ReLU(inplace=True)
+        self.conv2 = nn.Conv2d(bn_size * growth_rate, growth_rate, kernel_size=3, stride=1, padding=1, bias=False)
+
+        self.drop_rate = drop_rate
+
+    def forward(self, x):
+        out = self.conv1(self.relu1(self.norm1(x)))
+        if self.drop_rate > 0:
+            out = F.dropout(out, p=self.drop_rate, inplace=False, training=self.training)
+        out = self.conv2(self.relu2(self.norm2(out)))
+        if self.drop_rate > 0:
+            out = F.dropout(out, p=self.drop_rate, training=self.training)
+        return torch.cat([x, out], dim=1)
+
+
+class DenseBlock(nn.ModuleDict):
+    def __init__(self, num_layers, input_features, bn_size, growth_rate, drop_rate):
+        super().__init__()
+        for i in range(num_layers):
+            layer = DenseLayer( input_features + i * growth_rate, growth_rate=growth_rate, bn_size=bn_size, drop_rate=drop_rate)
+            self.add_module("denselayer%d" % (i + 1), layer)
+
+    def forward(self, x):
+        for name, layer in self.items():
+            x = layer(x)
+        return x
+
+
+class TransitionLayer(nn.Sequential):
+    def __init__(self, input_features, output_features):
+        super().__init__()
+        self.norm = nn.BatchNorm2d(input_features)
+        self.relu = nn.ReLU(inplace=True)
+        self.conv = nn.Conv2d(input_features, output_features, kernel_size=1, stride=1, bias=False)
+        self.pool = nn.AvgPool2d(kernel_size=2, stride=2)
+
+
+
+
+class DenseNet(nn.Module):
+    def __init__(self, growth_rate = 32, block_config = (6, 12, 24, 16), init_features = 64, bn_size = 4, drop_rate = 0.0, num_classes = 1000):
+        super().__init__()
+        # first convolution
+        self.features = nn.Sequential(
+            OrderedDict(
+                [
+                    ("conv0", nn.Conv2d(3, init_features, kernel_size=7, stride=2, padding=3, bias=False)),
+                    ("norm0", nn.BatchNorm2d(init_features)),
+                    ("relu0", nn.ReLU(inplace=True)),
+                    ("pool0", nn.MaxPool2d(kernel_size=3, stride=2, padding=1)),
+                ]
+            )
+        )
+
+        # denseblock
+        num_features = init_features
+        for i, num_layers in enumerate(block_config):
+            block = DenseBlock( num_layers=num_layers, input_features=num_features, bn_size=bn_size, growth_rate=growth_rate, drop_rate=drop_rate )
+            self.features.add_module("denseblock%d" % (i + 1), block)
+            num_features = num_features + num_layers * growth_rate
+            if i != len(block_config) - 1:
+                trans = TransitionLayer(input_features=num_features, output_features=num_features // 2)
+                self.features.add_module("transition%d" % (i + 1), trans)
+                num_features = num_features // 2
+
+        # classification layer: batch norm + linear layer
+        self.dim_in = num_features
+        self.features.add_module("norm5", nn.BatchNorm2d(num_features))
+        self.classifier = nn.Linear(num_features, num_classes)
+
+        # weight initialization
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.constant_(m.bias, 0)
+
+    
+    def encoder(self, x):
+        x = self.features(x)
+        x = F.relu(x, inplace=True)
+        return x # return a tensor of shape: [batch_size, d, h, w])
+    
+class MyDenseNet121(DenseNet):
+    def __init__(self, args):
+        super(MyDenseNet121, self).__init__(num_classes=args.num_classes)
+        
+        self.normalize = args.normalize
+        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
+
+        if args.p is None:
+            self.classifier = nn.Linear(self.dim_in, args.num_classes)
+        else:
+            self.classifier = RouteDICE(self.dim_in, args.num_classes, device=args.device, p=args.p, info=args.info)
+
+        # Initialize weights
+        self._initialize_weights()
+
+    def densenet_features(self, x):
+        x = self.encoder(x)
+        x = self.avgpool(x)
+        x = x.view(-1, self.dim_in)
+        return x
+    
+    def forward(self, x):
+        x = self.densenet_features(x)
+        x = self.classifier(x)
+        return x
+    
+def densenet121(args, pretrained = False):
+    model = MyDenseNet121(args)
+    if pretrained:
+        import torchvision.models as models
+        model = models.densenet121(pretrained=pretrained)
     return model
