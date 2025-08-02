@@ -27,7 +27,7 @@ utils/__pycache__/*.pyc
 experiments/model/.DS_Store
 experiments/model/__pycache__/*
 experiments/checkpoints/*imagenet*/
-experiments/statistics/*imagenet*/
+experiments/statistics/
 
 #results
 experiments/results/.DS_Store
