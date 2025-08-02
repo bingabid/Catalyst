@@ -5,7 +5,7 @@ State-of-the-art out-of-distribution (OOD) detection methods often overlook valu
 ## Models
 
 ### Models on CIFAR Benchmark
-The model used for ResNet-18, ResNet-34 and DenseNet-101 in this project are already provided as checkpoints inside `models/checkpoints/resnet18` , `models/checkpoints/resnet34`, and `models/checkpoints/densenet101`.
+The model used for ResNet-18, ResNet-34 and DenseNet-101 in this project are already provided as checkpoints inside `experiments/checkpoints/resnet18` , `experiments/checkpoints/resnet34`, and `experiments/checkpoints/densenet101`.
 ### Pre-trained Model on ImageNet Benchmark
 We use pre-trained models — ResNet-34, ResNet-50, and MobileNet-v2 — provided by PyTorch. These models are automatically downloaded at the start of the evaluation process, when the parameter `pre-trained` is set to `False`.
 
